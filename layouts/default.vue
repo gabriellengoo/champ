@@ -5,7 +5,7 @@
       <nav class="container md:w-auto w-[100vw] md:mx-auto flex justify-between items-center py-4 px-6">
         <!-- Logo + Links -->
         <div class="flex items-center space-x-6">
-          <img class="w-32 md:w-40" src="/fist.png" />
+          <img class="w-[30vw] md:w-[20vw]" src="/fist.png" />
           <div class="hidden md:flex space-x-6">
             <NuxtLink to="/" class="hover:text-[#B66126] hover:underline">Home</NuxtLink>
             <NuxtLink to="/about" class="hover:text-[#B66126] hover:underline">History</NuxtLink>
