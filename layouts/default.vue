@@ -123,9 +123,17 @@ const { locale, t } = useI18n();
 const translations = ref({});
 
 const loadTranslations = async () => {
-  const response = await fetch(`/locales/${locale.value}.json`);
-  translations.value = await response.json();
+  try {
+    const response = await fetch(`/locales/${locale.value}.json`);
+    if (!response.ok) {
+      throw new Error(`Failed to load translations: ${response.statusText}`);
+    }
+    translations.value = await response.json();
+  } catch (error) {
+    console.error("Error loading translations:", error);
+  }
 };
+
 
 watchEffect(() => {
   loadTranslations();
