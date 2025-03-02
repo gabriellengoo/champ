@@ -3,13 +3,10 @@
     <!-- Left Side: Accordion Information -->
     <div class="w-full lg:w-1/2 space-y-6">
       <h2 class="text-3xl font-semibold">About Us</h2>
-      <!-- <p class="text-gray-700 text-lg">
-        We are committed to improving health worldwide by providing access to essential medicines. Our company values innovation, quality, and safety in all our healthcare solutions. Since our founding, we have focused on bridging the gap between medical supply and demand, ensuring communities worldwide receive the treatment they need.
-      </p> -->
-      
+
       <div class="space-y-4">
         <div v-for="(section, index) in sections" :key="index">
-          <div class="">
+          <div>
             <button 
               @click="toggleAccordion(index)" 
               class="w-full text-left px-6 py-3 flex justify-between items-center border-b-black border-b-[.1vw] focus:outline-none"
@@ -27,11 +24,11 @@
 
       <!-- History Section -->
       <div class="mt-8">
-        <h2 class="text-lg">History</h2>
+        <h2 class="text-lg font-semibold">Our History</h2>
         <p class="text-gray-700 text-lg mt-4">
-          Established in 1993, our company played a crucial role in the early development of pharmaceutical trade in Nigeria. Our first major transaction involved supplying medicines to the Nigerian Army, marking the beginning of a trusted relationship with the healthcare sector.  
-          Rooted in Africa’s rich trading history, we trace our origins back to the Royal Nigeria Company, a key player in commerce during the colonial era. This company eventually became part of the United African Company (UAC), a historic trading powerhouse that was later acquired by Unilever.  
-          Through these historical foundations, our mission has always been clear: to expand the reach of quality medicines, connecting Africa to the world.
+          Founded in 1992 by Micheal F. Ngoo, our company was officially registered on June 4, 1993.  
+          The vision was born during Nigeria’s military era, when the Nigerian Army Medical Corps played a crucial role in pharmaceutical distribution. The need for regulated, high-quality medicines in a rapidly evolving healthcare system contributed to the eventual formation of NAFDAC (National Agency for Food and Drug Administration and Control).  
+          Our journey has been defined by a commitment to ensuring safe, accessible, and effective medicines across Nigeria and beyond.
         </p>
       </div>
     </div>
@@ -51,11 +48,11 @@ const activeAccordion = ref(null);
 const sections = [
   {
     title: 'Our Mission',
-    content: 'We are committed to improving health worldwide by providing access to essential medicines.'
+    content: 'Our mission is to improve global health by ensuring access to high-quality, life-saving medicines. Since our founding, we have worked tirelessly to bridge the gap between medical supply and demand, providing pharmaceutical solutions that meet the highest standards of safety and efficacy.'
   },
   {
     title: 'Our Values',
-    content: 'We value innovation, quality, and safety in all our healthcare solutions.'
+    content: 'Integrity, innovation, and impact define our core values. We believe in rigorous quality control, ethical business practices, and a commitment to advancing medical accessibility. Through strategic partnerships and cutting-edge research, we continue to drive progress in the pharmaceutical industry.'
   }
 ];
 
