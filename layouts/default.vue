@@ -1,23 +1,27 @@
 <template>
   <div>
     <!-- Header -->
-    <header class="bg-white fixed top-0 z-[10000] w-full shadow-lg">
+    <header class="bg-white text-xl font-semibold fixed top-0 z-[10000] w-full shadow-lg">
       <nav
         class="container md:w-auto w-[100vw] md:mx-auto flex justify-between items-center py-4 px-6"
       >
         <!-- Logo + Links -->
         <div class="flex items-center space-x-6">
-          <a href="./"><img class="w-[30vw] md:w-[20vw]" src="/fist.png" /></a>
+          <a href="./" class="px-[2vw] py-[1vw]"><img class="w-[40vw] md:w-[15vw]" src="/fist.png" /></a>
           <div class="hidden md:flex space-x-6">
-            <NuxtLink to="/" class="hover:text-[#B66126] hover:underline">{{
+            <NuxtLink to="/" class="hover:text-[#B66126] underline">{{
               translations.home
             }}</NuxtLink>
             <NuxtLink
               to="/about"
-              class="hover:text-[#B66126] hover:underline"
+              class="hover:text-[#B66126] underline"
               >{{ translations.history }}</NuxtLink
             >
+            <NuxtLink to="/partners" class="underline hover:text-[#B66126]"
+          >Partnerships</NuxtLink
+        >
           </div>
+         
         </div>
 
         <!-- Desktop Menu -->
@@ -40,17 +44,17 @@
 
           <NuxtLink
             to="/contact"
-            class="hover:text-[#B66126] hover:underline"
+            class="hover:text-[#B66126] underline"
             >{{ translations.contact }}</NuxtLink
           >
-
+          
           <!-- Language Dropdown -->
           <div class="relative">
             <button
               class="hover:text-[#B66126]"
               @click="toggleLanguageDropdown"
             >
-              <i class="fas fa-globe text-lg"></i>
+              <i class="fas fa-globe text-lg"></i> Language
             </button>
             <div
               v-if="isLanguageOpen"
@@ -100,7 +104,10 @@
           >History</NuxtLink
         >
         <NuxtLink to="/contact" class="block py-3 px-6 hover:text-[#B66126]"
-          >Contact</NuxtLink
+          >Contact Us</NuxtLink
+        >
+        <NuxtLink to="/partners" class="block py-3 px-6 hover:text-[#B66126]"
+          >Partnerships</NuxtLink
         >
       </div>
     </header>
@@ -169,4 +176,38 @@ button {
   justify-content: center;
   align-items: center;
 }
+
+/* Adding more space for the underline when hovered */
+/* Add this to your stylesheet */
+
+
+
+/* Basic styling for the link */
+.underline {
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
+  color: black;
+}
+
+.underline:hover {
+  color: #B66126; /* Change color on hover */
+}
+
+/* Underline effect on hover */
+.underline::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: #B66126; /* Color of the underline */
+  transition: width 0.3s ease; /* Smooth transition */
+}
+
+.underline:hover::before {
+  width: 100%; /* Underline grows to full width */
+}
+
 </style>

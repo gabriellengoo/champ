@@ -1,10 +1,10 @@
 <template>
     <div>
       <!-- Contact Page Section -->
-      <div class="container mx-auto p-8 pb-[10vw]">
-        <h1 class="text-4xl font-bold mb-6">Contact Us</h1>
-        <p class="mb-8">
-          Thank you for your interest in Champions Pharmaceuticals. Please use the form below to get in touch with us.
+      <div class="container mx-auto p-8 pb-[10vw md:pt-[5vw] pt-[25vw]">
+        <h1 class="text-2xl mb-6">Contact Us</h1>
+        <p class="mb-8 text-2xl">
+          If you have a general enquiry about the company or our healthcare business, you can contact championspharma through email at <a href="mailto:contact@championspharma.com" class="text-blue-600">contact@championspharma.com</a>
         </p>
   
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -59,22 +59,23 @@
     form {
       /* background-color: #f9f9f9; */
       padding: 2rem;
+      padding-left: 0%;
       border-radius: 0px;
       /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
     }
 
 
     form input{
-        /* border: none; */
+        border: none;
         border-radius: 0px;
         /* padding-top: 2vw; */
-        border: 1px solid #000000;
+        border-bottom: 1px solid #000000;
     }
     form textarea{
-        /* border: none; */
+        border: none;
         border-radius: 0px;
         /* padding-top: 2vw; */
-        border: 1px solid #000000;
+        border-bottom: 1px solid #000000;
     }
 
   

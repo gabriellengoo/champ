@@ -1,6 +1,7 @@
 <template>
-  <section class="container md:p-[2vw] p-[5vw] pt-[10vw] mx-auto py-16 flex flex-col lg:flex-row">
+  <section class="container md:p-[2vw] p-[5vw] md:pt-[10vw] pt-[20vw] mx-auto py-16 ">
     <!-- Left Side: Accordion Information -->
+     <div class="flex flex-col lg:flex-row">
     <div class="w-full lg:w-1/2 space-y-6">
       <h2 class="text-3xl font-semibold">About Us</h2>
 
@@ -22,20 +23,25 @@
         </div>
       </div>
 
-      <!-- History Section -->
-      <div class="mt-8">
-        <h2 class="text-lg font-semibold">Our History</h2>
-        <p class="text-gray-700 text-lg mt-4">
-          Founded in 1992 by Micheal F. Ngoo, our company was officially registered on June 4, 1993.  
-          The vision was born during Nigeria’s military era, when the Nigerian Army Medical Corps played a crucial role in pharmaceutical distribution. The need for regulated, high-quality medicines in a rapidly evolving healthcare system contributed to the eventual formation of NAFDAC (National Agency for Food and Drug Administration and Control).  
-          Our journey has been defined by a commitment to ensuring safe, accessible, and effective medicines across Nigeria and beyond.
-        </p>
-      </div>
+     
     </div>
 
     <!-- Right Side: Image -->
     <div class="w-full pl-[2vw] lg:w-1/2 mt-8 lg:mt-0">
-      <img src="/about.jpg" alt="About Us Image" class="w-full h-auto rounded-lg shadow-lg">
+      <img src="/meds.jpg" alt="About Us Image" class="w-full h-auto rounded-lg shadow-lg">
+    </div>
+</div>
+
+    <div>
+       <!-- History Section -->
+       <div class="mt-8">
+        <h2 class="text-lg font-semibold">Our History</h2>
+        <p class="text-gray-700 text-lg mt-4">
+          Founded in 1992 by Micheal Ngoo Senior, our company was officially registered on June 4, 1993.  
+          The vision was born during Nigeria’s military era, when the Nigerian Army Medical Corps played a crucial role in pharmaceutical distribution. The need for regulated, high-quality medicines in a rapidly evolving healthcare system contributed to the eventual formation of NAFDAC (National Agency for Food and Drug Administration and Control).  
+          Our journey has been defined by a commitment to ensuring safe, accessible, and effective medicines across Nigeria and beyond.
+        </p>
+      </div>
     </div>
   </section>
 </template>
